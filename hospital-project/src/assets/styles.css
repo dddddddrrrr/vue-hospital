@@ -1,0 +1,184 @@
+/* 全局样式 */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth; /* 平滑滚动效果 */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* 头部样式 */
+.header {
+  background-color: #0073e6;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 首页 Hero 区域 */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: #eef2f3;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0073e6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background-color: #005bb5;
+}
+
+/* 关于我们、服务项目等区域 */
+.about,
+.services,
+.news,
+.contact {
+  padding: 2rem 1rem;
+}
+
+/* 服务项目样式 */
+.services .service-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.service-item img {
+  width: 100%; /* 图片宽度适应父元素 */
+  height: 150px; /* 固定高度 */
+  object-fit: cover; /* 保持图片比例裁剪以适应框 */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 最新动态样式 */
+.news-carousel {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  height: 180px; /* 动态内容容器高度 */
+  align-items: center;
+  overflow: hidden; /* 去除滚动条 */
+}
+
+.news-item {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+  text-align: center;
+}
+
+.news-item img {
+  width: 100%; /* 图片宽度适应父元素 */
+  height: 150px; /* 固定高度 */
+  object-fit: cover; /* 保持图片比例裁剪 */
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.news-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.news-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.news-controls button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.news-controls button:hover {
+  background-color: #005bb5;
+}
+
+/* 联系我们样式 */
+.contact {
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* 页脚样式 */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.back-to-top {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0073e6;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-to-top:hover {
+  background-color: #005bb5;
+}
